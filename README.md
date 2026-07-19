@@ -1,6 +1,71 @@
 # pcos-prediction
 
-PCOS Prediction Using Machine Learning: An India FocusA comprehensive, deployment-ready machine learning framework engineered to address the critical PCOS diagnostic crisis in India, where up to 70% of cases remain undiagnosed and patients face an average 18-month diagnostic delay.  This project transitions diagnostics from resource-heavy ultrasound reliance to clinical, metabolic, and lifestyle pattern recognition, aligning with the SAHI Framework (March 2026) and the Ayushman Bharat Digital Mission (ABDM) ecosystem for equitable rural and urban deployment.  📌 Table of ContentsThe Problem & India ContextSystem Architecture & PipelineDataset StructureQuick Start & InstallationModel Training & PerformanceCase Study Impact MatrixResponsible AI & Deployment ArchitectureKey References🔬 The Problem & India ContextThe Epidemic Trajectory: India records the highest PCOS prevalence among South Asian countries ($269.8$ per $100,000$), with a Total Percentage Change (TPC) of +86.9%.  The Diagnostic Odyssey: Traditional Rotterdam criteria face structural barriers in India: strict specialist shortages ($1$ gynecologist per $15,000$ women), high ultrasound dependency in infrastructure-starved rural zones, and profound societal stigmas.  Systemic Metabolic Burden: Clinical data reveals that among Indian women with PCOS, 91.9% present with dyslipidemia, 43.2% with obesity, and 37.5% with metabolic syndrome. It is fundamentally a systemic metabolic crisis, not merely a reproductive condition.  ⚙️ System Architecture & Pipeline[ 541 Patient Records ] ──> [ Missing Value Imputation ] ──> [ BMI & WHR Computation ]
-                                                                      │
-[ Web/Mobile App Interface ] <── [ Inference Model ] <── [ Stratified 80/20 Train/Test ]
-Data Collection & Cleaning: Ingests $541$ patient profiles encompassing $45$ distinct clinical, hormonal, physical, and lifestyle features.  Feature Engineering: Automated BMI/WHR parsing, categorical encoding, standard scaling, and feature selection utilizing Random Forest Importance and SHAP values.  Predictive Modeling: Stratified $k$-fold cross-validation across Random Forest, SVM, Gradient Boosting, and Logistic Regression.  Edge Deployment Target: Low-footprint screening scripts optimized for deployment at Primary Health Centres (PHCs) and integrated with ASHA worker workflows.  
+# PCOS Prediction Using Machine Learning: An India Focus
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
+[![AI Healthcare India](https://img.shields.io/badge/Healthcare_AI-SAHI_Compliant-green.svg)](https://pib.gov.in)
+
+A comprehensive, deployment-ready machine learning framework engineered to address the critical **PCOS diagnostic crisis in India**, where up to **70% of cases remain undiagnosed** and patients face an average **18-month diagnostic delay**. 
+
+This project transitions diagnostics from resource-heavy ultrasound reliance to clinical, metabolic, and lifestyle pattern recognition, aligning with the **SAHI Framework (March 2026)** and the **Ayushman Bharat Digital Mission (ABDM)** ecosystem for equitable rural and urban deployment.
+
+---
+
+## 📌 Table of Contents
+* [The Problem & India Context](#-the-problem--india-context)
+* [System Architecture & Pipeline](#-system-architecture--pipeline)
+* [Dataset Structure](#-dataset-structure)
+* [Quick Start & Installation](#-quick-start--installation)
+* [Model Training & Performance](#-model-training--performance)
+* [Case Study Impact Matrix](#-case-study-impact-matrix)
+* [Responsible AI & Deployment Architecture](#-responsible-ai--deployment-architecture)
+* [Key References](#-key-references)
+
+---
+
+## 🔬 The Problem & India Context
+
+* **The Epidemic Trajectory:** India records the highest PCOS prevalence among South Asian countries ($269.8$ per $100,000$), with a Total Percentage Change (TPC) of **+86.9%**.
+* **The Diagnostic Odyssey:** Traditional Rotterdam criteria face structural barriers in India: strict specialist shortages ($1$ gynecologist per $15,000$ women), high ultrasound dependency in infrastructure-starved rural zones, and profound societal stigmas.
+* **Systemic Metabolic Burden:** Clinical data reveals that among Indian women with PCOS, **91.9% present with dyslipidemia**, **43.2% with obesity**, and **37.5% with metabolic syndrome**. It is fundamentally a systemic metabolic crisis, not merely a reproductive condition.
+
+* 1. **Data Collection & Cleaning:** Ingests $541$ patient profiles encompassing $45$ distinct clinical, hormonal, physical, and lifestyle features.
+2. **Feature Engineering:** Automated BMI/WHR parsing, categorical encoding, standard scaling, and feature selection utilizing Random Forest Importance and SHAP values.
+3. **Predictive Modeling:** Stratified $k$-fold cross-validation across Random Forest, SVM, Gradient Boosting, and Logistic Regression.
+4. **Edge Deployment Target:** Low-footprint screening scripts optimized for deployment at Primary Health Centres (PHCs) and integrated with ASHA worker workflows.
+
+---
+
+## 📊 Dataset Structure
+
+The model ingests 45 feature vectors categorized across four key domains:
+
+| Category | Targeted Parameters |
+| :--- | :--- |
+| **Clinical & Cycle** | Age, BMI, Blood Pressure, Pulse Rate, Cycle Length, Cycle Regularity |
+| **Hormonal Profiles** | FSH, LH, TSH, AMH, PRL, Vitamin D3, PRG, $\beta$-HCG |
+| **Physical/Ultrasound** | Hip/Waist ratio, Follicle Numbers (Inf/Sup), Endometrium thickness |
+| **Lifestyle & Dermatological** | Weight gain, Hirsutism, Skin darkening, Hair loss, Fast food intake |
+
+1. **Data Collection & Cleaning:** Ingests 541 patient profiles encompassing 45 distinct clinical, hormonal, physical, and lifestyle features[cite: 1].
+2. **Feature Engineering:** Automated BMI/WHR parsing, categorical encoding, standard scaling, and feature selection utilizing Random Forest Importance and SHAP values[cite: 1].
+3. **Predictive Modeling:** Stratified $k$-fold cross-validation across Random Forest, SVM, Gradient Boosting, and Logistic Regression[cite: 1].
+4. **Edge Deployment Target:** Low-footprint screening scripts optimized for deployment at Primary Health Centres (PHCs) and integrated with ASHA worker workflows[cite: 1].
+
+---
+
+## 📊 Dataset Structure
+
+The model ingests 45 feature vectors categorized across four key domains[cite: 1]:
+
+| Category | Targeted Parameters |
+| :--- | :--- |
+| **Clinical & Cycle** | Age, BMI, Blood Pressure, Pulse Rate, Cycle Length, Cycle Regularity[cite: 1] |
+| **Hormonal Profiles** | FSH, LH, TSH, AMH, PRL, Vitamin D3, PRG, $\beta$-HCG[cite: 1] |
+| **Physical/Ultrasound** | Hip/Waist ratio, Follicle Numbers (Inf/Sup), Endometrium thickness[cite: 1] |
+| **Lifestyle & Dermatological** | Weight gain, Hirsutism, Skin darkening, Hair loss, Fast food intake[cite: 1] |
+
+---
+
+## ⚙️ System Architecture & Pipeline
