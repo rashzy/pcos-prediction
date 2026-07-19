@@ -14,13 +14,9 @@ This project transitions diagnostics from resource-heavy ultrasound reliance to 
 
 ## 📌 Table of Contents
 * [The Problem & India Context](#-the-problem--india-context)
-* [System Architecture & Pipeline](#-system-architecture--pipeline)
 * [Dataset Structure](#-dataset-structure)
-* [Quick Start & Installation](#-quick-start--installation)
 * [Model Training & Performance](#-model-training--performance)
-* [Case Study Impact Matrix](#-case-study-impact-matrix)
-* [Responsible AI & Deployment Architecture](#-responsible-ai--deployment-architecture)
-* [Key References](#-key-references)
+
 
 ---
 
