@@ -2,9 +2,7 @@
 
 # PCOS Prediction Using Machine Learning: An India Focus
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
-[![AI Healthcare India](https://img.shields.io/badge/Healthcare_AI-SAHI_Compliant-green.svg)](https://pib.gov.in)
+
 
 A comprehensive, deployment-ready machine learning framework engineered to address the critical **PCOS diagnostic crisis in India**, where up to **70% of cases remain undiagnosed** and patients face an average **18-month diagnostic delay**. 
 
@@ -12,7 +10,7 @@ This project transitions diagnostics from resource-heavy ultrasound reliance to 
 
 ---
 
-## 📌 Table of Contents
+##  Table of Contents
 * [The Problem & India Context](#-the-problem--india-context)
 * [Dataset Structure](#-dataset-structure)
 * [Model Training & Performance](#-model-training--performance)
@@ -20,7 +18,7 @@ This project transitions diagnostics from resource-heavy ultrasound reliance to 
 
 ---
 
-## 🔬 The Problem & India Context
+##  The Problem & India Context
 
 * **The Epidemic Trajectory:** India records the highest PCOS prevalence among South Asian countries ($269.8$ per $100,000$), with a Total Percentage Change (TPC) of **+86.9%**.
 * **The Diagnostic Odyssey:** Traditional Rotterdam criteria face structural barriers in India: strict specialist shortages ($1$ gynecologist per $15,000$ women), high ultrasound dependency in infrastructure-starved rural zones, and profound societal stigmas.
@@ -33,7 +31,7 @@ This project transitions diagnostics from resource-heavy ultrasound reliance to 
 
 ---
 
-## 📊 Dataset Structure
+##  Dataset Structure
 
 The model ingests 45 feature vectors categorized across four key domains:
 
@@ -51,20 +49,10 @@ The model ingests 45 feature vectors categorized across four key domains:
 
 ---
 
-## 📊 Dataset Structure
-
-The model ingests 45 feature vectors categorized across four key domains[cite: 1]:
-
-| Category | Targeted Parameters |
-| :--- | :--- |
-| **Clinical & Cycle** | Age, BMI, Blood Pressure, Pulse Rate, Cycle Length, Cycle Regularity[cite: 1] |
-| **Hormonal Profiles** | FSH, LH, TSH, AMH, PRL, Vitamin D3, PRG, $\beta$-HCG[cite: 1] |
-| **Physical/Ultrasound** | Hip/Waist ratio, Follicle Numbers (Inf/Sup), Endometrium thickness[cite: 1] |
-| **Lifestyle & Dermatological** | Weight gain, Hirsutism, Skin darkening, Hair loss, Fast food intake[cite: 1] |
 
 ---
 
-## 📈 Model Training & Performance
+##  Model Training & Performance
 
 The core architecture prioritizes **Sensitivity (Recall)** alongside overall Accuracy to minimize false negatives in critical early-stage evaluations[cite: 1].
 
