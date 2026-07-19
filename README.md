@@ -68,4 +68,11 @@ The model ingests 45 feature vectors categorized across four key domains[cite: 1
 
 ---
 
-## ⚙️ System Architecture & Pipeline
+## 📈 Model Training & Performance
+
+The core architecture prioritizes **Sensitivity (Recall)** alongside overall Accuracy to minimize false negatives in critical early-stage evaluations[cite: 1].
+
+* **Random Forest Baseline Accuracy:** **88.07%**[cite: 1]
+* **Target Clinical Sensitivity:** **>85%** using non-ultrasound, lifestyle-centric features alone[cite: 1].
+
+> ⚠️ **Implication for ML Engineering:** Urban vs. Rural metabolic profiles vary heavily in India (e.g., varying inflammatory markers and localized insulin resistance profiles)[cite: 1]. Models must be deployed with multi-site calibration weights to eliminate demographic or regional bias[cite: 1].
